@@ -24,6 +24,10 @@ function getEventValue(event) {
     return [...target.selectedOptions].map((option) => option.value);
   }
 
+  if (target.type === 'checkbox') {
+    return target.checked;
+  }
+  
   return target.value;
 }
 
